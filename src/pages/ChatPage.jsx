@@ -182,7 +182,7 @@ const ChatPage = ({ onBack }) => {
             <Bot size={24} className="text-white" />
           </div>
           <div>
-            <h1 className="font-bold text-gray-800 leading-tight">MindfulAI</h1>
+            <h1 className="font-bold text-gray-800 leading-tight">Health-AI</h1>
             <div className="flex items-center gap-1.5">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               <span className="text-xs text-gray-500 font-medium">Voz Activa</span>
