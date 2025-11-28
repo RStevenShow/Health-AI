@@ -171,7 +171,7 @@ const ProfilePage = ({ onNavigate }) => {
                  <div className="bg-white/20 w-fit p-3 rounded-2xl mb-4 backdrop-blur-sm">
                     <Sparkles size={24} className="text-yellow-300" />
                  </div>
-                 <h2 className="text-2xl font-bold mb-2">Hablar con MindfulAI</h2>
+                 <h2 className="text-2xl font-bold mb-2">Hablar con Health-AI</h2>
                  <p className="text-indigo-100 mb-6 max-w-md">
                     Tu asistente emocional disponible 24/7. Conversa, desahógate y recibe consejos basados en evidencia.
                  </p>
