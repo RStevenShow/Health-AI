@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* Estilos base para toda la app */
+body {
+  background-color: #F8FAFC; 
+  color: #1E293B;
+  font-family: system-ui, -apple-system, sans-serif;
+}
