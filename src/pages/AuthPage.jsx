@@ -139,7 +139,7 @@ const AuthPage = () => {
           </div>
           
           <div className="relative z-10 text-sm font-medium text-indigo-200">
-            © 2024 Proyecto Salud Mental
+            © 2025 Proyecto Salud Mental
           </div>
         </div>
 
