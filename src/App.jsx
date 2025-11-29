@@ -1,9 +1,7 @@
-
-
 import React, { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './config/firebase';
-import { Loader2 } from 'lucide-react';
+import { Loader2, MessageCircle, ClipboardList, BarChart2 } from 'lucide-react';
 
 // Páginas
 import AuthPage from './pages/AuthPage';
@@ -14,10 +12,22 @@ import StatsPage from './pages/StatsPage';
 import AboutPage from './pages/AboutPage';
 import BreathingPage from './pages/BreathingPage';
 import JournalPage from './pages/JournalPage';
+import MaintenancePage from './pages/MaintenancePage';
+
+// --- INTERRUPTOR  ---
+// Pon esto en 'true' para bloquear la app. 
+// Pon esto en 'false' el día de la presentación.
+const IS_MAINTENANCE_MODE = true; 
+
 function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [currentView, setCurrentView] = useState('profile');
+
+  // 1. BLOQUEO DE EMERGENCIA (Lo primero que se verifica)
+  if (IS_MAINTENANCE_MODE) {
+     return <MaintenancePage />;
+  }
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -61,17 +71,17 @@ function App() {
         <StatsPage onBack={() => setCurrentView('profile')} />
       )}
 
-       {/* VISTA 5: ACERCA DE */}
+      {/* VISTA 5: ACERCA DE */}
       {currentView === 'about' && (
         <AboutPage onBack={() => setCurrentView('profile')} />
       )}
 
-        {/* VISTA 6: ACERCA DE */}
-       {currentView === 'breathing' && (
+      {/* VISTA 6: RESPIRACIÓN */}
+      {currentView === 'breathing' && (
         <BreathingPage onBack={() => setCurrentView('profile')} />
       )}
 
-       {/* VISTA 7: DIARIO */}
+      {/* VISTA 7: DIARIO */}
       {currentView === 'journal' && (
         <JournalPage onBack={() => setCurrentView('profile')} />
       )}
