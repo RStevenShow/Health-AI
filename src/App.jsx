@@ -16,8 +16,8 @@ import MaintenancePage from './pages/MaintenancePage';
 import SplashScreen from './components/SplashScreen';
 
 // --- INTERRUPTOR ---
-const IS_MAINTENANCE_MODE = true ; // Cambia a 'false' para desactivar el modo mantenimiento
-
+const IS_MAINTENANCE_MODE = false ; // Cambia a 'false' para desactivar el modo mantenimiento
+0
 function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true); // Estado de carga de Firebase
